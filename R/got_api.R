@@ -33,12 +33,18 @@
 #' house378 <- got_api(type = "houses", id = 378)
 #' }
 #' @export
-got_api <- function(type = c("books", "characters", "houses"), id = NULL, ...) {
+got_api <- function(type = c("books", "characters", "houses"),
+                    id = NULL,
+                    url = NULL,
+                    ...) {
 
-  type <- match.arg(type)
-  path <- paste("/api", type, id, sep = "/")
-  url <- modify_url("https://anapioficeandfire.com", path = path)
-
+  # Check if url, modify from input type and id from if not 
+  if (is.null(url)) {
+    type <- match.arg(type)
+    path <- paste("/api", type, id, sep = "/")
+    url <- modify_url("https://anapioficeandfire.com", path = path)
+  }  
+  
   # Set up user agent
   ua <- user_agent("Gotr - https://github.com/mangothecat")
 

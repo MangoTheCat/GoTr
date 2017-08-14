@@ -4,7 +4,8 @@
 \alias{got_api}
 \title{Retrieves books, characters or houses information from the anapioficeandfire API}
 \usage{
-got_api(type = c("books", "characters", "houses"), id = NULL, ...)
+got_api(type = c("books", "characters", "houses"), id = NULL, url = NULL,
+  ...)
 }
 \arguments{
 \item{type}{The endpoint type, one of books, characters or houses.
