@@ -4,7 +4,6 @@ Version: 0.0.0.9000
 Authors@R: person("Ava", "Yang", email = "ayang@mango-solutions.com", role = c("aut", "cre"))
 Description: This package provides access to the anapioficeandfire API from R. It pulls data 
   of the universe of Ice and Fire including HBO series Game of Thrones.
-Depends: R (>= 3.3.3)
 imports: httr, jsonlite
 License: MIT + file LICENSE
 Encoding: UTF-8
